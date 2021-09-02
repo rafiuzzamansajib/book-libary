@@ -8,6 +8,13 @@ const searchBook = () => {
 }
 
 const displayBooks = books => {
+        // Found Search Number
+    const containerM = document.getElementById('results');
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <h4>${books.numFound} results found<h4>
+    `
+    containerM.appendChild(div);
     // error handel and show data
     if(books.numFound===0){
         alert('Result Not Found')

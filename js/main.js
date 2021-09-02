@@ -9,12 +9,14 @@ const searchBook = () => {
 
 const displayBooks = books => {
         // Found Search Number
-    const containerM = document.getElementById('results');
+    const numberFound = document.getElementById('results');
+    numberFound.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
     <h4>${books.numFound} results found<h4>
     `
-    containerM.appendChild(div);
+    numberFound.appendChild(div);
+
     // error handel and show data
     if(books.numFound===0){
         alert('Result Not Found')

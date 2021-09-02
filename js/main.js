@@ -13,7 +13,7 @@ const displayBooks = books => {
     numberFound.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
-    <h4>${books.numFound} results found<h4>
+    <h4 class='text-light'>${books.numFound} search results found<h4>
     `
     numberFound.appendChild(div);
 
